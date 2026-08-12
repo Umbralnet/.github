@@ -2,7 +2,7 @@
 
 > **Security without spectacle. Capability without attribution.**
 
-Umbralnet is an independent security engineering organization focused on infrastructure, adversary simulation, cloud security, network defense, automation, and offensive-security research.
+Umbralnet is an independent security research organization focused on offensive-security research.
 
 Much of what we build is intentionally quiet.
 
@@ -18,20 +18,12 @@ We are interested in systems that sit close to the boundary between **defense, i
 
 Umbralnet exists to explore, build, and harden systems operating in hostile or uncertain environments.
 
-Primary areas of interest include:
+Primary areas include:
 
 ```text
-[ CLOUD ]        Azure / Cloud Security / IaC
-[ NETWORK ]      Routing / Firewalls / Segmentation / VPN
 [ SECURITY ]     Detection / Adversary Simulation / Research
-[ AUTOMATION ]   Bicep / GitHub Actions / Security Engineering
-[ SYSTEMS ]      Linux / Infrastructure / Low-Level Tooling
 [ INTELLIGENCE ] Signals / Telemetry / Analysis / Correlation
 ```
-
-The objective is not simply to deploy infrastructure.
-
-It is to understand how it behaves when assumptions fail.
 
 ---
 
@@ -39,25 +31,13 @@ It is to understand how it behaves when assumptions fail.
 
 **Observe first.**
 
-Telemetry is part of the system, not an afterthought.
-
 **Assume compromise.**
 
-Trust boundaries should be explicit, narrow, and continuously challenged.
+**Automate.**
 
-**Automate repeatable operations.**
-
-Infrastructure should be reproducible, reviewable, and disposable.
-
-**Minimize exposure.**
-
-Services should reveal only what they need to reveal.
+**Minimize.**
 
 **Design for failure.**
-
-Networks fail. Credentials leak. Dependencies disappear. Humans make mistakes.
-
-Good systems remain understandable when that happens.
 
 ---
 
@@ -71,16 +51,15 @@ Good systems remain understandable when that happens.
          ┌───────────────────┼───────────────────┐
          │                   │                   │
          ▼                   ▼                   ▼
-   CLOUD SECURITY      NETWORK SECURITY     SECURITY R&D
+       ASEC                 DSEC                FSEC 
          │                   │                   │
-   IaC / Identity      Routing / VPN       Tooling / PoCs
-   Azure / CI/CD       Firewalls / DNS     Detection Research
-   Policy / RBAC       Segmentation        Adversary Simulation
+   IaC / Identity    Tooling / Staging   Research / PoCs
+   Access / Implant    Escalation        Intrusion / Exfil
+   Policy / Controls   Persistence       Evasion
 ```
 
 Public repositories may include:
 
-* infrastructure-as-code
 * security automation
 * lab environments
 * network tooling
@@ -88,21 +67,15 @@ Public repositories may include:
 * research prototypes
 * detection engineering
 * operational documentation
-* small tools built to answer unusually specific questions
 
-Not every repository should be interpreted as a product.
+Most are experiments.
 
-Some are experiments.
-
-Some are building blocks.
-
-Some are simply evidence that a problem was interesting enough to investigate.
 
 ---
 
 ## `// INFRASTRUCTURE`
 
-Umbralnet infrastructure follows an infrastructure-as-code-first model.
+Umbralnet infrastructure workflow.
 
 ```text
 change
@@ -134,8 +107,6 @@ implicit trust        → reduced
 changes without review→ discouraged
 ```
 
-GitHub Actions, workload identity federation, Bicep, policy, and scoped cloud identities are preferred over static credentials and manual deployment.
-
 ---
 
 ## `// RESEARCH`
@@ -146,14 +117,11 @@ Areas that currently attract our attention:
 Cloud attack paths
 Identity boundaries
 Azure networking
-Firewall automation
 Detection engineering
 Protocol behaviour
 Infrastructure failure modes
 Adversary tradecraft
 Linux internals
-DNS
-VPN technologies
 Security telemetry
 Automation under constrained trust
 ```
@@ -161,8 +129,6 @@ Automation under constrained trust
 Research may involve reproducing known techniques, building controlled proofs of concept, studying defensive visibility, or testing assumptions in isolated environments.
 
 The goal is understanding.
-
-Not noise.
 
 ---
 
@@ -193,9 +159,7 @@ ORGANIZATION   UMBRALNET
 DOMAIN         SECURITY ENGINEERING
 POSTURE        LOW VISIBILITY
 DEPLOYMENT     DISTRIBUTED
-AUTOMATION     PREFERRED
 TRUST          MINIMAL
-TELEMETRY      ENABLED
 STATUS         OPERATIONAL
 ```
 
