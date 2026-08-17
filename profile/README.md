@@ -53,12 +53,12 @@ Primary areas include:
          ▼                   ▼                   ▼
        ASEC                 DSEC                FSEC 
          │                   │                   │
-   IaC / Identity    Tooling / Staging   Research / PoCs
+   Recon / TA0043    Tooling / Staging   Research / PoCs
    Access / Implant    Escalation        Intrusion / Exfil
    Policy / Controls   Persistence       Evasion
 ```
 
-Public repositories may include:
+Public repositories include:
 
 * security automation
 * lab environments
@@ -68,8 +68,7 @@ Public repositories may include:
 * detection engineering
 * operational documentation
 
-Most are experiments.
-
+Content may be experimental.
 
 ---
 
